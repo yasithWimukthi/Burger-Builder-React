@@ -1,14 +1,16 @@
+import React, { Component } from 'react';
+import Auxi from '../../hoc/Auxi';
 
-import React, { Component } from 'react'
 
 export default class BurgerBuilder extends Component {
 
 
     render() {
         return (
-            <div>
-                
-            </div>
+            <Auxi>
+                <div>Burger</div>
+                <div>Build control area</div>
+            </Auxi>
         )
     }
 }
