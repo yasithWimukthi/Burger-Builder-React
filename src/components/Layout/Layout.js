@@ -1,4 +1,5 @@
 import React from 'react';
+import classes from './Layout.css';
 import Auxi from '../../hoc/Auxi';
 
 export default function Layout(props) {
@@ -8,7 +9,7 @@ export default function Layout(props) {
             toolbar
         </div>
 
-        <main>
+        <main className={classes.content}>
             {props.children}
         </main>
         </Auxi>
