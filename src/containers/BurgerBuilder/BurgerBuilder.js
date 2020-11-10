@@ -9,7 +9,7 @@ export default class BurgerBuilder extends Component {
         ingredients : {
             salad: 1,
             bacon: 1,
-            chesse: 2,
+            cheese: 2,
             meat: 2
         }
     }
