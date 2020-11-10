@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Auxi from '../../hoc/Auxi';
 import Burger from '../../components/Burger/Burger';
+import BuildControls from '../../components/Burger/BuildControls/BuildControls'
 
 
 export default class BurgerBuilder extends Component {
@@ -18,7 +19,7 @@ export default class BurgerBuilder extends Component {
         return (
             <Auxi>
                 <Burger ingredients={this.state.ingredients} />
-                <div>Build control area</div>
+                <BuildControls />
             </Auxi>
         )
     }
