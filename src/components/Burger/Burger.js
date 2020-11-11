@@ -35,4 +35,4 @@ const Burger = (props) => {
     )
 };
 
-export default Burger
+export default Burger;
