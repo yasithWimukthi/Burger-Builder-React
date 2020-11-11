@@ -15,6 +15,14 @@ export default class BurgerBuilder extends Component {
         }
     }
 
+    addIngredientHandler = type =>{
+
+    }
+
+    removeIngredientHandler = type =>{
+        
+    }
+
     render() {
         return (
             <Auxi>
