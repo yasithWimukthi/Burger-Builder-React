@@ -103,6 +103,7 @@ export default class BurgerBuilder extends Component {
                     ingredientRemoved={this.removeIngredientHandler}
                     disabled={disabledInfo}
                     price={this.state.totalPrice}
+                    purchasable={this.state.purchasable}
                 />
             </Auxi>
         )
