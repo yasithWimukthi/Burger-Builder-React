@@ -19,8 +19,27 @@ export default class BurgerBuilder extends Component {
             cheese: 0,
             meat: 0
         },
-        totalPrice : 4
+        totalPrice : 4,
+        purchasable : false
     }
+
+    updatePurchaseState = ()=>{
+        const ingredients = {
+            ...this.state.ingredients
+        }
+
+        const sumOfIngredients = Object.keys(ingredients)
+            .map(ingredient =>{
+                return ingredients[ingredient];
+            })
+            .reduce((sum,el)=>{
+                return sum = el;
+            },0);
+        
+        this.setState({
+            purchasable : sumOfIngredients > 0
+        })
+    };
 
     addIngredientHandler = type =>{
         // SET INGREDIENT COUNT
