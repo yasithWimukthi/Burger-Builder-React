@@ -6,7 +6,7 @@ function OrderSummary(props) {
     const ingredientSummary = Object.keys(props.ingredients)
         .map(ingredient =>{
             return( 
-            <li>
+            <li key={ingredient}>
                 <span style={styles}> {ingredient} : {props.ingredients[ingredient]} </span>
             </li> )
         })
@@ -18,6 +18,7 @@ function OrderSummary(props) {
             <ul>
                 {ingredientSummary}
             </ul>
+            <p>Continue to checkout ?</p>
         </Auxi>
     )
 }
