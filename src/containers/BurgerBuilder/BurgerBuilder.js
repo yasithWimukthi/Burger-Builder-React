@@ -22,7 +22,8 @@ export default class BurgerBuilder extends Component {
             meat: 0
         },
         totalPrice : 4,
-        purchasable : false
+        purchasable : false,
+        purchasing : false
     }
 
     updatePurchaseState = (ingredients)=>{
@@ -87,6 +88,12 @@ export default class BurgerBuilder extends Component {
 
         this.updatePurchaseState(UPDATE_INGREDIENTS)
     }
+
+    purchaseHandler = ()=>{
+        this.setState({
+            purchasing : true
+        })
+    };
 
     render() {
 
