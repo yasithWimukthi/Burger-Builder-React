@@ -101,6 +101,10 @@ export default class BurgerBuilder extends Component {
         })
     };
 
+    purchaseContinueHandler = ()=>{
+        alert("You Continue!!!");
+    };
+
     render() {
 
         const disabledInfo = {
@@ -114,7 +118,10 @@ export default class BurgerBuilder extends Component {
         return (
             <Auxi>
                 <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
-                    <OrderSummary ingredients={this.state.ingredients}/>
+                    <OrderSummary 
+                        ingredients={this.state.ingredients}
+                        purchaseCancelled={this.purchaseCancelHandler}
+                        purchaseContinued={this.purchaseContinueHandler}/>
                 </Modal>
 
                 <Burger ingredients={this.state.ingredients} />

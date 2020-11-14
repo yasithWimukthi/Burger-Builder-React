@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Button.css';
 
-export const Button = (props) => {
+export  const Button = (props) => {
     return (
         <button
             onClick={props.clicked}
