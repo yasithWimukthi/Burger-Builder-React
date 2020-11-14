@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './Modal.css';
-imp
+import Auxi from '../../../hoc/Auxi';
+import Backdrop from '../Backdrop/Backdrop' ;
 
 function Modal(props) {
 
@@ -10,9 +11,12 @@ function Modal(props) {
     }
     
     return (
-        <div className={classes.Modal} style={styles}>
-            {props.children}
-        </div>
+        <Auxi>
+            <Backdrop show={props.show}/>
+            <div className={classes.Modal} style={styles}>
+                {props.children}
+            </div>
+        </Auxi>
     )
 }
 
