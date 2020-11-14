@@ -95,6 +95,12 @@ export default class BurgerBuilder extends Component {
         })
     };
 
+    purchaseCancelHandler = ()=>{
+        this.setState({
+            purchasing : false
+        })
+    };
+
     render() {
 
         const disabledInfo = {
@@ -107,7 +113,7 @@ export default class BurgerBuilder extends Component {
 
         return (
             <Auxi>
-                <Modal show={this.state.purchasing}>
+                <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
                     <OrderSummary ingredients={this.state.ingredients}/>
                 </Modal>
 

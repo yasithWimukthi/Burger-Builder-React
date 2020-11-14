@@ -12,7 +12,7 @@ function Modal(props) {
     
     return (
         <Auxi>
-            <Backdrop show={props.show}/>
+            <Backdrop show={props.show} clicked={props.modalClosed}/>
             <div className={classes.Modal} style={styles}>
                 {props.children}
             </div>
