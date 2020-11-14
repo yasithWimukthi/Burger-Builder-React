@@ -107,7 +107,7 @@ export default class BurgerBuilder extends Component {
 
         return (
             <Auxi>
-                <Modal>
+                <Modal show={this.state.purchasing}>
                     <OrderSummary ingredients={this.state.ingredients}/>
                 </Modal>
 
@@ -118,6 +118,7 @@ export default class BurgerBuilder extends Component {
                     disabled={disabledInfo}
                     price={this.state.totalPrice}
                     purchasable={this.state.purchasable}
+                    ordered={this.purchaseHandler}
                 />
             </Auxi>
         )
