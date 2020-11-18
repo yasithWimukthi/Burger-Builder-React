@@ -20,7 +20,11 @@ class Layout extends Component{
         return (
             <Auxi>
                 <Toolbar />
-                <SideDrawer closed={this.sideDrawerCloseHandler} />
+
+                <SideDrawer 
+                    open={this.state.showSideDrawer} 
+                    closed={this.sideDrawerCloseHandler} />
+                    
                 <main className={classes.content}>
                     {this.props.children}
                 </main>
