@@ -8,7 +8,7 @@ import Auxi from '../../../hoc/Auxi' ;
 const SideDrawer = (props) => {
     return (
         <Auxi>
-            <Backdrop  show/>
+            <Backdrop  show={props.open} clicked={props.closed}/>
             <div className={classes.SideDrawer}>
             <div className={classes.logo}>
                 <Logo />
